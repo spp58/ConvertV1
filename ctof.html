@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farenheit To Celsius</title>
+</head>
+<style>
+  .bodyy{
+    background-color: aqua;
+  }
+  .hone{
+    display:flex;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 50px;
+    border: 30px brown; 
+    color:#bb1515;
+    margin-top: -10px;
+    }
+    .put{
+      background-color: #bd7018e8;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+      margin:auto;
+      height: 30px;
+      width:250px
+
+    }
+    .value{
+      text-align: center;
+    }
+</style>
+<body class="bodyy">
+  <h1 class="hone">Enter tempreture in Celsius</h1>
+<input class="put" id="inputCelsius" type="number" placeholder="Enter Temp in Celsius"
+oninput="cTof(this.value)" onchange="cTof(this.value)">
+
+
+
+  <br><br>
+  <p class="put"><span id="outputCelcius"></span>&nbsp;Fahrenheit</p>
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <h1 class="hone">Return to Main </h1>
+  <button class="put" onclick="document.location='index.html'">Click To Return</button>
+
+  <script>
+    function cTof (valNum) {
+      valNum = parseFloat (valNum);
+      document.getElementById("outputCelcius").innerHTML=(1.8 * valNum) +32;
+    }
+  </script>
+  
+  
+</body>
+</html>

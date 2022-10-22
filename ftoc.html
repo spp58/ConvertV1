@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farenheit To Celsius</title>
+</head>
+<style>
+  .bodyy{
+    background-color: aqua;
+  }
+   .hone{
+     display:flex;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 50px;
+    border: 30px brown; 
+    color:#bb1515;
+    margin-top: -10px;
+    }
+    .put{
+      background-color: #bd7018e8;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+      margin:auto;
+      height: 30px;
+      width:300px
+
+    }
+    .value{
+      text-align: center;
+    }
+</style>
+<body class="bodyy">
+  <h1 class="hone">Enter tempreture in Farenheit</h1>
+<input class="put" id="inputFahrenheit" type="number" placeholder="Enter Tempreture in Fahrenheit"
+oninput="fToc(this.value)" onchange="fToc(this.value)">
+
+<br>
+ <p class="put"><span id="outputCelcius"></span>&nbsp;Celsius</p>
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+   <h1 class="hone">Return to Main</h1>
+   <button class="put" onclick="document.location='index.html'">Click To Return
+  </button>
+
+  <script>
+    function fToc (valNum) {
+      valNum = parseFloat (valNum).toFixed(2);
+      document.getElementById("outputCelcius").innerHTML=(0.56 * valNum - 32);
+    }
+  </script>
+
+  
+</body>
+</html>
